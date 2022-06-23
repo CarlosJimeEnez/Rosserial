@@ -153,6 +153,8 @@ void setup()
 
 void loop()
 {
+  str_msg.data = 5;
+  chatter.publish(&str_msg);
 
   if (joint_status == 1) // If command callback (arm_cb) is being called, execute stepper command
   {
